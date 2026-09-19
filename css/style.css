@@ -496,6 +496,24 @@ section[id] { scroll-margin-top: 112px; }
   position: relative;
 }
 
+.vip-garland {
+  display: none;
+  position: absolute;
+  top: -224px;
+  right: -20px;
+  width: 380px;
+  max-width: 38%;
+  height: auto;
+  z-index: 5;
+  opacity: 0.95;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
+}
+
+@media (min-width: 1240px) {
+  .vip-garland { display: block; }
+}
+
 .vip-card {
   position: relative;
   overflow: hidden;
@@ -505,25 +523,6 @@ section[id] { scroll-margin-top: 112px; }
   padding: 32px 24px;
   transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), background-color 0.35s var(--ease);
 }
-
-.vip-card::after {
-  content: "";
-  position: absolute;
-  top: -18px;
-  right: -22px;
-  width: 150px;
-  height: 150px;
-  background-image: url("../images/branch-sprig.webp");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
-  opacity: 0.5;
-  filter: brightness(1.6) saturate(0.7);
-  pointer-events: none;
-  transform: rotate(8deg);
-}
-
-.vip-card:nth-child(2n)::after { transform: rotate(8deg) scaleX(-1); right: -18px; }
 
 .vip-card:hover {
   transform: translateY(-6px);
