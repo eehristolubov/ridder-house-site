@@ -88,7 +88,7 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
 
-document.querySelectorAll('.gallery-photo img').forEach(img => {
+document.querySelectorAll('.gallery-photo img, .doc-photo img').forEach(img => {
   img.addEventListener('click', () => {
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;

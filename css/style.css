@@ -704,6 +704,42 @@ section[id] { scroll-margin-top: 112px; }
   border-bottom: 2px solid var(--color-accent);
 }
 
+/* Document photos (plans) */
+.doc-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid rgba(23, 49, 31, 0.1);
+  background: var(--color-cream);
+  cursor: zoom-in;
+  box-shadow: 0 6px 20px rgba(23, 49, 31, 0.05);
+}
+
+.doc-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+
+.doc-photo:hover img { transform: scale(1.03); }
+
+.doc-plot {
+  margin-top: 40px;
+}
+
+.doc-photo-caption {
+  display: block;
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid rgba(23, 49, 31, 0.08);
+}
+
+.floorplan-col .doc-photo {
+  margin-bottom: 20px;
+}
+
 .floorplan-list {
   list-style: none;
   padding: 0;
