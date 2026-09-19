@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z' fill='%234a9463'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Stalinist+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Ruslan+Display&family=Amatic+SC:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -81,6 +81,9 @@
 </section>
 
 <section class="section vip-section" id="vip">
+  <div class="tree-accent on-dark vip-1" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z"/></svg>
+  </div>
   <div class="container">
     <span class="section-label reveal" style="--i:0">VIP-статус</span>
     <h2 class="section-title reveal" style="--i:1">Соседство, которое нельзя купить дважды</h2>
@@ -124,7 +127,17 @@
 </section>
 
 <section class="section" id="about">
+  <div class="tree-accent on-light about-1" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z"/></svg>
+  </div>
   <div class="container about-grid">
+    <svg class="trail-path" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M40,20 C160,70 60,150 190,190 C310,225 230,320 380,360 C460,382 420,440 520,470" fill="none" stroke="#17311f" stroke-width="2" stroke-dasharray="1 12" stroke-linecap="round" opacity="0.18"/>
+      <circle cx="40" cy="20" r="4" fill="#4a9463" opacity="0.35"/>
+      <circle cx="190" cy="190" r="4" fill="#4a9463" opacity="0.35"/>
+      <circle cx="380" cy="360" r="4" fill="#4a9463" opacity="0.35"/>
+      <circle cx="520" cy="470" r="4" fill="#4a9463" opacity="0.35"/>
+    </svg>
     <div class="about-text reveal" style="--i:0">
       <span class="section-label">О доме</span>
       <h2>Дом на земле, которую не купить дважды</h2>
@@ -214,6 +227,14 @@
 <section class="section section-alt" id="location">
   <div class="container location-grid">
     <div class="location-text reveal" style="--i:0">
+      <div class="compass-accent" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="50" cy="50" r="46"/>
+          <circle cx="50" cy="50" r="34"/>
+          <path d="M50 4 V16 M50 84 V96 M4 50 H16 M84 50 H96" stroke-width="1.2"/>
+          <path d="M50 20 L58 50 L50 80 L42 50 Z" fill="currentColor" stroke="none" opacity="0.8"/>
+        </svg>
+      </div>
       <span class="section-label">Локация</span>
       <h2>Посёлок Ульба, город Риддер</h2>
       <p>Ульба — район, окружённый лесами и горами Восточного Казахстана, у самой границы заповедной территории. Вдали от городского шума, но с сохранённой доступностью инфраструктуры Риддера.</p>
@@ -241,6 +262,19 @@
   </div>
   <div class="container price-content">
     <div class="price-frame reveal" style="--i:0">
+      <div class="seal-badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path id="sealCircle" d="M100,25 a75,75 0 1,1 -0.1,0"/>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="100" cy="100" r="68" fill="none" stroke="currentColor" stroke-width="1"/>
+          <text font-size="12.5" letter-spacing="2.5">
+            <textPath href="#sealCircle" startOffset="0%">· УСАДЬБА · КЕДРОВСКАЯ 36А · ЗАПОВЕДНАЯ ЗОНА</textPath>
+          </text>
+          <path d="M100 66 88 92h9 -20 46h-20l22 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+      </div>
       <span class="section-label section-label-light">Стоимость</span>
       <h2 class="price-title">230 000 000 тенге</h2>
       <div class="price-alt">
@@ -286,6 +320,9 @@
 </section>
 
 <footer class="site-footer">
+  <div class="tree-accent on-dark footer-1" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z"/></svg>
+  </div>
   <div class="forest-divider top">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0,120 L0,95 L60,60 L120,85 L180,45 L240,75 L300,35 L360,70 L420,50 L480,80 L540,40 L600,72 L660,48 L720,78 L780,38 L840,68 L900,52 L960,82 L1020,42 L1080,74 L1140,54 L1200,84 L1260,44 L1320,76 L1380,56 L1440,90 L1440,120 Z" fill="#0b1c11"/>
