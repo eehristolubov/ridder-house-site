@@ -828,6 +828,11 @@ section[id] { scroll-margin-top: 76px; }
   aspect-ratio: 21 / 9;
 }
 
+.gallery-photo.tall {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
 /* Lightbox */
 .lightbox {
   position: fixed;
