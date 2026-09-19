@@ -3,19 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Усадьба на Кедровской, 36А — дом в кедровом лесу, Риддер</title>
-<meta name="description" content="Продажа дома 156.6 м² на участке 36 соток в кедровом лесу, п. Ульба, г. Риддер. Рядом пруд и река. Престижный район — «Рублёвка» Восточного Казахстана.">
+<title>VIP-усадьба на границе заповедника — Кедровская, 36А, Риддер</title>
+<meta name="description" content="VIP-усадьба 156.6 м² на 36 сотках у границы заповедной зоны. Вековой кедровый лес, пруд и река. П. Ульба, г. Риддер, Восточный Казахстан. Продажа собственником.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z' fill='%23a9822f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<div class="top-bar">
+  <span>VIP-объект</span>
+  <span class="top-bar-dot">·</span>
+  <span>Граница заповедной зоны</span>
+  <span class="top-bar-dot">·</span>
+  <span>Продажа собственником</span>
+</div>
+
+<header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a href="#top" class="logo">Кедровская, 36А</a>
+    <a href="#top" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z"/></svg>
+      <span>Кедровская, 36А</span>
+    </a>
     <nav class="nav">
+      <a href="#vip">VIP-статус</a>
       <a href="#about">О доме</a>
       <a href="#features">Характеристики</a>
       <a href="#gallery">Галерея</a>
@@ -32,39 +47,78 @@
 <section class="hero" id="top">
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <p class="eyebrow">п. Ульба · г. Риддер · Восточный Казахстан</p>
-    <h1>Усадьба в кедровом лесу</h1>
-    <p class="hero-subtitle">Дом 156.6&nbsp;м² на участке 36&nbsp;соток в окружении векового кедрового леса, рядом пруд и река. Своя «Рублёвка» — в самом тихом и престижном уголке Казахстана.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Узнать подробнее</a>
-      <a href="#gallery" class="btn btn-outline">Смотреть галерею</a>
+    <p class="eyebrow hero-anim" style="--d:0">п. Ульба · г. Риддер · Восточный Казахстан</p>
+    <h1 class="hero-anim" style="--d:1">Усадьба на&nbsp;границе заповедника</h1>
+    <p class="hero-subtitle hero-anim" style="--d:2">156.6&nbsp;м² дома на 36&nbsp;сотках собственной земли — участок примыкает к особо охраняемой природной территории. Вековой кедровый лес, пруд и река в шаговой доступности. Своя «Рублёвка» — в самом тихом и закрытом уголке Казахстана.</p>
+    <div class="hero-actions hero-anim" style="--d:3">
+      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+      <a href="#vip" class="btn btn-outline">Узнать, чем уникален участок</a>
+    </div>
+  </div>
+  <a href="#vip" class="scroll-cue" aria-label="Пролистать вниз"><span></span></a>
+</section>
+
+<section class="section vip-section" id="vip">
+  <div class="container">
+    <span class="section-label reveal" style="--i:0">VIP-статус</span>
+    <h2 class="section-title reveal" style="--i:1">Соседство, которое нельзя купить дважды</h2>
+    <p class="section-note reveal" style="--i:2">Земли особо охраняемых природных территорий не подлежат застройке — значит, вид на лес и тишина за забором этого участка гарантированы навсегда.</p>
+    <div class="vip-grid">
+      <div class="vip-card reveal" style="--i:0">
+        <span class="vip-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M24 5 41 12 V22 C41 33 34 41 24 44 14 41 7 33 7 22 V12 Z"/><path d="M16 23 21 28 32 17"/></svg>
+        </span>
+        <h3>Граница заповедной зоны</h3>
+        <p>Участок непосредственно примыкает к особо охраняемой природной территории — соседство, недоступное для большинства объектов в регионе.</p>
+      </div>
+      <div class="vip-card reveal" style="--i:1">
+        <span class="vip-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 14 20h20z"/><path d="M24 15 12 30h24z"/><path d="M24 24 10 40h28z"/><path d="M24 40v5"/></svg>
+        </span>
+        <h3>36 соток векового леса</h3>
+        <p>Собственная земля в окружении столетнего кедрового леса — редкость для благоустроенного участка такого масштаба.</p>
+      </div>
+      <div class="vip-card reveal" style="--i:2">
+        <span class="vip-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="21" width="24" height="18" rx="2"/><path d="M17 21V15a7 7 0 0 1 14 0v6"/></svg>
+        </span>
+        <h3>Приватность и статус</h3>
+        <p>П. Ульба называют «Рублёвкой» Восточного Казахстана — самый закрытый и тихий район Риддера, где ценят уединение.</p>
+      </div>
+      <div class="vip-card reveal" style="--i:3">
+        <span class="vip-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 20c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/></svg>
+        </span>
+        <h3>Вода в шаговой доступности</h3>
+        <p>Пруд и река рядом с домом — рыбалка, отдых у воды и живописные пейзажи прямо за окном.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section" id="about">
   <div class="container about-grid">
-    <div class="about-text">
+    <div class="about-text reveal" style="--i:0">
       <span class="section-label">О доме</span>
-      <h2>Тишина леса, простор земли, дом для семьи на поколения</h2>
-      <p>Участок площадью 36 соток полностью окружён кедровым лесом — воздух здесь пропитан хвоей, а рядом протекает река и раскинулся пруд. Это место, где городская суета остаётся позади, а природа становится частью повседневной жизни.</p>
+      <h2>Дом на земле, которую не купить дважды</h2>
+      <p>Участок площадью 36 соток примыкает к особо охраняемой природной территории — застройка там невозможна в принципе. Это значит, что тишина, приватность и вид на кедровый лес сохранятся здесь навсегда, независимо от соседних строек.</p>
       <p>Дом площадью 156.6&nbsp;м² расположен в посёлке Ульба города Риддер — районе, который по праву называют «Рублёвкой» Восточного Казахстана за его престиж, уединённость и природное окружение.</p>
     </div>
     <div class="about-highlights">
-      <div class="highlight">
-        <span class="highlight-number">156.6</span>
+      <div class="highlight reveal" style="--i:0">
+        <span class="highlight-number"><span class="counter" data-count="156.6" data-decimals="1">0</span></span>
         <span class="highlight-label">м² площадь дома</span>
       </div>
-      <div class="highlight">
-        <span class="highlight-number">36</span>
+      <div class="highlight reveal" style="--i:1">
+        <span class="highlight-number"><span class="counter" data-count="36" data-decimals="0">0</span></span>
         <span class="highlight-label">соток земли</span>
       </div>
-      <div class="highlight">
-        <span class="highlight-number">100%</span>
+      <div class="highlight reveal" style="--i:2">
+        <span class="highlight-number"><span class="counter" data-count="100" data-decimals="0">0</span>%</span>
         <span class="highlight-label">кедровый лес вокруг</span>
       </div>
-      <div class="highlight">
-        <span class="highlight-number">2</span>
+      <div class="highlight reveal" style="--i:3">
+        <span class="highlight-number"><span class="counter" data-count="2" data-decimals="0">0</span></span>
         <span class="highlight-label">водоёма рядом: пруд и река</span>
       </div>
     </div>
@@ -73,34 +127,41 @@
 
 <section class="section section-alt" id="features">
   <div class="container">
-    <span class="section-label">Характеристики</span>
-    <h2 class="section-title">Что входит в усадьбу</h2>
+    <span class="section-label reveal" style="--i:0">Характеристики</span>
+    <h2 class="section-title reveal" style="--i:1">Что входит в усадьбу</h2>
     <div class="features-grid">
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:0">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 22 24 8l16 14"/><path d="M12 20v20h24V20"/><path d="M20 40V28h8v12"/></svg></span>
         <h3>Дом</h3>
         <p>Общая площадь 156.6 м², построен в 2022 году. Два этажа, просторные комнаты и балкон, продуманная планировка для семейной жизни и приёма гостей.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:1">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 14h32v20H8z"/><path d="M8 14 24 30 40 14"/></svg></span>
         <h3>Земельный участок</h3>
         <p>36 соток собственной земли — достаточно для сада, хозяйственных построек, беседок и зон отдыха.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:2">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 14 20h20z"/><path d="M24 15 12 30h24z"/><path d="M24 24 10 40h28z"/><path d="M24 40v5"/></svg></span>
         <h3>Кедровый лес</h3>
         <p>Участок примыкает к вековому кедровому лесу — естественная защита от ветра, чистейший воздух и уединённость.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:3">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 20c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/></svg></span>
         <h3>Пруд и река</h3>
         <p>Рядом с домом расположены пруд и река — рыбалка, отдых у воды и живописные виды в шаговой доступности.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:4">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="12" y="21" width="24" height="18" rx="2"/><path d="M17 21V15a7 7 0 0 1 14 0v6"/></svg></span>
         <h3>Престижный район</h3>
         <p>Посёлок Ульба известен как самый статусный и тихий район Риддера — здесь предпочитают жить те, кто ценит приватность.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:5">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5v6M24 37v6M5 24h6M37 24h6"/><circle cx="24" cy="24" r="11"/></svg></span>
         <h3>Адрес</h3>
         <p>Казахстан, г. Риддер, п. Ульба, ул. Кедровская, 36А.</p>
       </div>
-      <div class="feature-card">
+      <div class="feature-card reveal" style="--i:6">
+        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8 40 18l-6 6-10-10z"/><path d="M24 14 10 28v6h6l14-14"/><path d="M10 34l4 4"/></svg></span>
         <h3>Материалы и коммуникации</h3>
         <p>Брусчатые стены, ленточный бетонный фундамент, кровля из металлочерепицы. Электричество подключено, автономное отопление на твёрдом топливе.</p>
       </div>
@@ -110,33 +171,33 @@
 
 <section class="section" id="gallery">
   <div class="container">
-    <span class="section-label">Галерея</span>
-    <h2 class="section-title">Дом и окрестности</h2>
-    <p class="section-note">Фото пруда, реки и интерьеров добавим позже.</p>
+    <span class="section-label reveal" style="--i:0">Галерея</span>
+    <h2 class="section-title reveal" style="--i:1">Дом и окрестности</h2>
+    <p class="section-note reveal" style="--i:2">Фото пруда, реки и интерьеров добавим позже.</p>
     <div class="gallery-grid">
-      <div class="gallery-photo large"><img src="images/facade-front.jpg" alt="Фасад дома с балконом"></div>
-      <div class="gallery-photo"><img src="images/facade-wide.jpg" alt="Дом на фоне леса и гор"></div>
-      <div class="gallery-photo"><img src="images/side-roof.jpg" alt="Дом со стороны крыши и котельной"></div>
-      <div class="gallery-photo"><img src="images/wall-siding.jpg" alt="Фасад дома, боковая стена"></div>
-      <div class="gallery-placeholder"><span>Пруд</span></div>
-      <div class="gallery-placeholder"><span>Река</span></div>
+      <div class="gallery-photo large reveal" style="--i:0"><img src="images/facade-front.jpg" alt="Фасад дома с балконом" loading="lazy"></div>
+      <div class="gallery-photo reveal" style="--i:1"><img src="images/facade-wide.jpg" alt="Дом на фоне леса и гор" loading="lazy"></div>
+      <div class="gallery-photo reveal" style="--i:2"><img src="images/side-roof.jpg" alt="Дом со стороны крыши и котельной" loading="lazy"></div>
+      <div class="gallery-photo reveal" style="--i:3"><img src="images/wall-siding.jpg" alt="Фасад дома, боковая стена" loading="lazy"></div>
+      <div class="gallery-placeholder reveal" style="--i:4"><span>Пруд</span></div>
+      <div class="gallery-placeholder reveal" style="--i:5"><span>Река</span></div>
     </div>
   </div>
 </section>
 
 <section class="section section-alt" id="location">
   <div class="container location-grid">
-    <div class="location-text">
+    <div class="location-text reveal" style="--i:0">
       <span class="section-label">Локация</span>
       <h2>Посёлок Ульба, город Риддер</h2>
-      <p>Ульба Riddер — район, окружённый лесами и горами Восточного Казахстана, вдали от городского шума, но с сохранённой доступностью инфраструктуры Риддера.</p>
+      <p>Ульба — район, окружённый лесами и горами Восточного Казахстана, у самой границы заповедной территории. Вдали от городского шума, но с сохранённой доступностью инфраструктуры Риддера.</p>
       <ul class="location-list">
         <li>Казахстан, Восточно-Казахстанская область</li>
         <li>г. Риддер, п. Ульба</li>
         <li>ул. Кедровская, 36А</li>
       </ul>
     </div>
-    <div class="location-map">
+    <div class="location-map reveal" style="--i:1">
       <iframe
         title="Карта расположения участка"
         src="https://www.openstreetmap.org/export/embed.html?bbox=83.45%2C50.28%2C83.55%2C50.34&layer=mapnik"
@@ -148,30 +209,32 @@
 
 <section class="section price-section" id="price">
   <div class="container price-content">
-    <span class="section-label section-label-light">Стоимость</span>
-    <h2 class="price-title">230 000 000 тенге</h2>
-    <div class="price-alt">
-      <span>≈ 43 400 000 ₽</span>
-      <span class="price-divider">·</span>
-      <span>≈ 515 000 $</span>
+    <div class="price-frame reveal" style="--i:0">
+      <span class="section-label section-label-light">Стоимость</span>
+      <h2 class="price-title">230 000 000 тенге</h2>
+      <div class="price-alt">
+        <span>≈ 43 400 000 ₽</span>
+        <span class="price-divider">·</span>
+        <span>≈ 515 000 $</span>
+      </div>
+      <p class="price-note">Продажа собственником. Готовы организовать показ участка и оформление сделки в сжатые сроки.</p>
+      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
     </div>
-    <p class="price-note">Цена окончательная. Возможны индивидуальные условия по договорённости.</p>
-    <a href="#contact" class="btn btn-primary">Оставить заявку</a>
   </div>
 </section>
 
 <section class="section" id="contact">
   <div class="container contact-grid">
-    <div class="contact-text">
+    <div class="contact-text reveal" style="--i:0">
       <span class="section-label">Связаться с нами</span>
       <h2>Хотите узнать больше об усадьбе?</h2>
-      <p>Оставьте заявку — мы свяжемся с вами и ответим на все вопросы, договоримся об осмотре участка.</p>
+      <p>Оставьте имя и телефон — мы свяжемся с вами в ближайшее время и договоримся об осмотре участка.</p>
       <div class="contact-address">
         <strong>Адрес объекта</strong>
         <span>Казахстан, г. Риддер, п. Ульба, ул. Кедровская, 36А</span>
       </div>
     </div>
-    <form class="contact-form" id="contact-form" novalidate>
+    <form class="contact-form reveal" style="--i:1" id="contact-form" novalidate>
       <div class="form-row">
         <label for="name">Имя</label>
         <input type="text" id="name" name="name" placeholder="Ваше имя" required>
@@ -179,10 +242,6 @@
       <div class="form-row">
         <label for="phone">Телефон</label>
         <input type="tel" id="phone" name="phone" placeholder="+7 ___ ___ __ __" required>
-      </div>
-      <div class="form-row">
-        <label for="message">Сообщение</label>
-        <textarea id="message" name="message" rows="4" placeholder="Ваш вопрос или удобное время для связи"></textarea>
       </div>
       <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
       <p class="form-status" id="form-status" role="status"></p>
@@ -196,6 +255,13 @@
     <span>Казахстан, г. Риддер, п. Ульба, ул. Кедровская, 36А</span>
   </div>
 </footer>
+
+<a href="#contact" class="floating-cta" id="floating-cta">Оставить заявку</a>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">&times;</button>
+  <img src="" alt="" id="lightbox-img">
+</div>
 
 <script src="js/script.js"></script>
 </body>
