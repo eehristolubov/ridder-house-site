@@ -13,7 +13,32 @@ const progressBar = document.getElementById('scroll-progress');
 const floatingCta = document.getElementById('floating-cta');
 const heroHeight = () => document.querySelector('.hero').offsetHeight;
 
+/* Hide the floating CTA whenever a matching CTA (or the contact form
+   itself) is already on screen, so the same button never doubles up. */
+let primaryCtaVisible = false;
+const ctaWatchTargets = [
+  ...document.querySelectorAll('a.btn-primary[href="#contact"]'),
+  document.getElementById('contact')
+].filter(Boolean);
+
 let ticking = false;
+
+if ('IntersectionObserver' in window) {
+  const visibleCtas = new Set();
+  const ctaObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) visibleCtas.add(entry.target);
+      else visibleCtas.delete(entry.target);
+    });
+    primaryCtaVisible = visibleCtas.size > 0;
+    if (!ticking) {
+      requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { threshold: 0.2 });
+  ctaWatchTargets.forEach(el => ctaObserver.observe(el));
+}
+
 function onScroll() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -21,7 +46,7 @@ function onScroll() {
   progressBar.style.width = progress + '%';
 
   header.classList.toggle('scrolled', scrollTop > 20);
-  floatingCta.classList.toggle('visible', scrollTop > heroHeight() * 0.8);
+  floatingCta.classList.toggle('visible', scrollTop > heroHeight() * 0.8 && !primaryCtaVisible);
 
   ticking = false;
 }
@@ -33,6 +58,7 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 onScroll();
+setInterval(onScroll, 400);
 
 /* Scroll reveal */
 const revealItems = document.querySelectorAll('.reveal');

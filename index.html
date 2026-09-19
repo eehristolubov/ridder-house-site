@@ -17,17 +17,6 @@
 
 <div class="scroll-progress" id="scroll-progress"></div>
 
-<div class="top-bar">
-  <span class="top-bar-full">VIP-объект</span>
-  <span class="top-bar-dot top-bar-full">·</span>
-  <span class="top-bar-full">Граница заповедной зоны</span>
-  <span class="top-bar-dot top-bar-full">·</span>
-  <span class="top-bar-full">Продажа собственником</span>
-  <span class="top-bar-short">VIP-объект</span>
-  <span class="top-bar-dot top-bar-short">·</span>
-  <span class="top-bar-short">Заповедная зона</span>
-</div>
-
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <a href="#top" class="logo">
@@ -55,7 +44,7 @@
   <div class="container hero-content">
     <p class="eyebrow hero-anim" style="--d:0">п. Ульба · г. Риддер · Восточный Казахстан</p>
     <h1 class="hero-anim" style="--d:1">Усадьба на&nbsp;границе заповедника</h1>
-    <p class="hero-subtitle hero-anim" style="--d:2">101.7&nbsp;м² дома на 36&nbsp;сотках собственной земли — участок примыкает к особо охраняемой природной территории. Вековой кедровый лес, пруд и река в шаговой доступности. Своя «Рублёвка» — в самом тихом и закрытом уголке Казахстана.</p>
+    <p class="hero-subtitle hero-anim" style="--d:2">101.7&nbsp;м² дома на 36&nbsp;сотках собственной земли на самой границе заповедника. Вековой кедровый лес, пруд и река в шаговой доступности. Своя «Рублёвка» — в самом тихом и закрытом уголке Казахстана.</p>
     <div class="hero-actions hero-anim" style="--d:3">
       <a href="#contact" class="btn btn-primary">Оставить заявку</a>
       <a href="#vip" class="btn btn-outline">Узнать, чем уникален участок</a>
@@ -88,7 +77,7 @@
   <div class="container">
     <span class="section-label reveal" style="--i:0">VIP-статус</span>
     <h2 class="section-title reveal" style="--i:1">Соседство, которое нельзя купить дважды</h2>
-    <p class="section-note reveal" style="--i:2">Земли особо охраняемых природных территорий не подлежат застройке — значит, вид на лес и тишина за забором этого участка гарантированы навсегда.</p>
+    <p class="section-note reveal" style="--i:2">Четыре факта, которые определяют статус этого места — от соседей, которых нельзя застроить, до полной приватности.</p>
     <div class="vip-grid">
       <div class="vip-card reveal" style="--i:0">
         <span class="vip-icon">
@@ -136,7 +125,7 @@
     <div class="about-text reveal" style="--i:0">
       <span class="section-label">О доме</span>
       <h2>Дом на земле, которую не купить дважды</h2>
-      <p>Участок площадью 36 соток примыкает к особо охраняемой природной территории — застройка там невозможна в принципе. Это значит, что тишина, приватность и вид на кедровый лес сохранятся здесь навсегда, независимо от соседних строек.</p>
+      <p>Сосед этого участка — не чужой забор, а кедровый лес заповедника: строительство на таких землях запрещено законом. Значит, тишина и вид из окна останутся такими навсегда, что бы ни построили вокруг дальше.</p>
       <p>Дом площадью 101.7&nbsp;м² расположен в посёлке Ульба города Риддер — районе, который по праву называют «Рублёвкой» Восточного Казахстана за его престиж, уединённость и природное окружение.</p>
     </div>
     <div class="about-highlights">
@@ -294,9 +283,17 @@
   </div>
 </section>
 
-<section class="section section-alt" id="location">
-  <div class="container location-grid">
-    <div class="location-text reveal" style="--i:0">
+<section class="section-alt location-section" id="location">
+  <div class="location-map-full reveal">
+    <iframe
+      title="Карта расположения участка"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=83.45%2C50.28%2C83.55%2C50.34&layer=mapnik"
+      loading="lazy">
+    </iframe>
+    <span class="location-pin">ул. Кедровская, 36А</span>
+  </div>
+  <div class="container">
+    <div class="location-panel reveal" style="--i:1">
       <div class="compass-accent" aria-hidden="true">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
           <circle cx="50" cy="50" r="46"/>
@@ -308,18 +305,7 @@
       <span class="section-label">Локация</span>
       <h2>Посёлок Ульба, город Риддер</h2>
       <p>Ульба — район, окружённый лесами и горами Восточного Казахстана, у самой границы заповедной территории. Вдали от городского шума, но с сохранённой доступностью инфраструктуры Риддера.</p>
-      <ul class="location-list">
-        <li>Казахстан, Восточно-Казахстанская область</li>
-        <li>г. Риддер, п. Ульба</li>
-        <li>ул. Кедровская, 36А</li>
-      </ul>
-    </div>
-    <div class="location-map reveal" style="--i:1">
-      <iframe
-        title="Карта расположения участка"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=83.45%2C50.28%2C83.55%2C50.34&layer=mapnik"
-        loading="lazy">
-      </iframe>
+      <p class="location-address">Казахстан, Восточно-Казахстанская область, г. Риддер, п. Ульба, ул. Кедровская, 36А.</p>
     </div>
   </div>
 </section>
