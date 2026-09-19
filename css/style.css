@@ -9,10 +9,10 @@
   --color-cream-alt: #f1ece0;
   --color-text: #2a2a24;
   --color-text-muted: #5c5c52;
-  --font-display: 'Unbounded', 'Inter', sans-serif;
+  --font-display: 'Onest', 'Manrope', sans-serif;
   --font-seal: 'Ruslan Display', Georgia, serif;
-  --font-marker: 'Amatic SC', 'Inter', cursive;
-  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-marker: 'Jura', 'Manrope', sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
   --max-width: 1160px;
   --radius: 16px;
   --ease: cubic-bezier(.16,.84,.44,1);
@@ -318,11 +318,11 @@ section[id] { scroll-margin-top: 112px; }
 .eyebrow {
   font-family: var(--font-marker);
   color: var(--color-accent-light);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
@@ -444,12 +444,12 @@ section[id] { scroll-margin-top: 112px; }
 .section-label {
   display: inline-block;
   font-family: var(--font-marker);
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .section-label-light { color: var(--color-accent-light); }
@@ -485,17 +485,23 @@ section[id] { scroll-margin-top: 112px; }
 }
 
 .vip-card {
-  background: rgba(250, 247, 240, 0.05);
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(250, 247, 240, 0.05);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140'%3E%3Cg stroke='%237dc499' stroke-opacity='0.4' stroke-width='1.4' fill='none' stroke-linecap='round'%3E%3Cpath d='M124 10 L36 98'/%3E%3Cpath d='M55 79 L31 67 M55 79 L46 103'/%3E%3Cpath d='M73 61 L49 49 M73 61 L64 85'/%3E%3Cpath d='M91 43 L67 31 M91 43 L82 67'/%3E%3Cpath d='M109 25 L85 13 M109 25 L100 49'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top 0 right 0;
+  background-size: 128px 128px;
   border: 1px solid rgba(125, 196, 153, 0.2);
   border-radius: var(--radius);
   padding: 32px 24px;
-  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), background 0.35s var(--ease);
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), background-color 0.35s var(--ease);
 }
 
 .vip-card:hover {
   transform: translateY(-6px);
   border-color: rgba(125, 196, 153, 0.5);
-  background: rgba(250, 247, 240, 0.08);
+  background-color: rgba(250, 247, 240, 0.08);
 }
 
 .vip-icon {
@@ -578,9 +584,10 @@ section[id] { scroll-margin-top: 112px; }
 .highlight-label {
   display: block;
   font-family: var(--font-marker);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: rgba(250, 247, 240, 0.85);
   margin-top: 2px;
 }
