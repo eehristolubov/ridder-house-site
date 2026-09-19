@@ -526,6 +526,11 @@ section[id] { scroll-margin-top: 112px; }
   aspect-ratio: auto;
 }
 
+.gallery-photo.banner {
+  grid-column: 1 / -1;
+  aspect-ratio: 21 / 9;
+}
+
 /* Lightbox */
 .lightbox {
   position: fixed;
@@ -767,6 +772,7 @@ section[id] { scroll-margin-top: 112px; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-placeholder.large,
   .gallery-photo.large { grid-column: span 1; grid-row: span 1; aspect-ratio: 4/3; }
+  .gallery-photo.banner { aspect-ratio: 4/3; }
   .about-highlights { grid-template-columns: 1fr; }
   .top-bar { font-size: 0.65rem; gap: 6px; }
   .floating-cta { right: 16px; bottom: 16px; padding: 13px 20px; font-size: 0.85rem; }
