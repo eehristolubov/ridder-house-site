@@ -1,391 +1,304 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#17311f">
-<title>VIP-усадьба на границе заповедника — Кедровская, 36А, Риддер</title>
-<meta name="description" content="VIP-усадьба 101.7 м² на 36 сотках у границы заповедной зоны. Вековой кедровый лес, пруд и река. П. Ульба, г. Риддер, Восточный Казахстан. Продажа собственником.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z' fill='%234a9463'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@500;600;700;800&family=Ruslan+Display&family=Jura:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#172019">
+  <title>Кедровская, 36А — частная территория у кедрового леса</title>
+  <meta name="description" content="Дом 101,7 м² и 36 соток земли у границы заповедной зоны. Кедровый лес, пруд и река рядом. Посёлок Ульба, Риддер, Восточный Казахстан.">
+  <meta property="og:title" content="Кедровская, 36А — частная территория у кедрового леса">
+  <meta property="og:description" content="Дом 101,7 м² и 36 соток земли в природном окружении Риддера.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/pond.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z' fill='%2366715e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
 
-<div class="scroll-progress" id="scroll-progress"></div>
-
-<header class="site-header" id="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
-      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z"/></svg>
-      <span>Кедровская, 36А</span>
-    </a>
-    <nav class="nav">
-      <a href="#vip">VIP-статус</a>
-      <a href="#about">О доме</a>
-      <a href="#features">Характеристики</a>
-      <a href="#docs">Документы</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#location">Локация</a>
-      <a href="#price">Цена</a>
-      <a href="#contact" class="nav-cta">Связаться</a>
-    </nav>
-    <button class="burger" id="burger" aria-label="Открыть меню">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<section class="hero" id="top">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <p class="eyebrow hero-anim" style="--d:0">п. Ульба · г. Риддер · Восточный Казахстан</p>
-    <h1 class="hero-anim" style="--d:1">Усадьба на&nbsp;границе заповедника</h1>
-    <p class="hero-subtitle hero-anim" style="--d:2">101.7&nbsp;м² дома на 36&nbsp;сотках собственной земли на самой границе заповедника. Вековой кедровый лес, пруд и река в шаговой доступности. Своя «Рублёвка» — в самом тихом и закрытом уголке Казахстана.</p>
-    <div class="hero-actions hero-anim" style="--d:3">
-      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
-      <a href="#vip" class="btn btn-outline">Узнать, чем уникален участок</a>
+  <header class="site-header" id="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Кедровская 36А — на главную">
+        <span>Кедровская 36А</span>
+        <small>Private property · Ridder</small>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#territory">Территория</a>
+        <a href="#house">Дом</a>
+        <a href="#plans">Планировка</a>
+        <a href="#location">Локация</a>
+        <a class="nav-enquiry" href="#contact">Запросить материалы</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
-  </div>
+  </header>
 
-  <div class="hero-badge hero-badge-1">
-    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M24 5 41 12 V22 C41 33 34 41 24 44 14 41 7 33 7 22 V12 Z"/><path d="M16 23 21 28 32 17"/></svg>
-    <div>
-      <strong>Заповедная зона</strong>
-      <span>Участок граничит с особо охраняемой территорией</span>
-    </div>
-  </div>
-  <div class="hero-badge hero-badge-2">
-    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 14 20h20z"/><path d="M24 15 12 30h24z"/><path d="M24 24 10 40h28z"/><path d="M24 40v5"/></svg>
-    <div>
-      <strong>36 соток леса</strong>
-      <span>Вековой кедровый лес вокруг участка</span>
-    </div>
-  </div>
-
-  <a href="#vip" class="scroll-cue" aria-label="Пролистать вниз"><span></span></a>
-
-  <img class="hero-branch" src="images/branch-cones.webp" alt="" aria-hidden="true" width="700" height="583" loading="lazy" fetchpriority="low">
-
-</section>
-
-<section class="section vip-section" id="vip">
-  <img class="tree-accent on-dark vip-1" src="images/branch-full.webp" alt="" aria-hidden="true" width="700" height="540" loading="lazy" fetchpriority="low">
-  <div class="container">
-    <span class="section-label reveal" style="--i:0">VIP-статус</span>
-    <h2 class="section-title reveal" style="--i:1">Соседство, которое нельзя купить дважды</h2>
-    <p class="section-note reveal" style="--i:2">Четыре факта, которые определяют статус этого места — от соседей, которых нельзя застроить, до полной приватности.</p>
-    <div class="vip-grid">
-      <div class="vip-card reveal" style="--i:0">
-        <span class="vip-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M24 5 41 12 V22 C41 33 34 41 24 44 14 41 7 33 7 22 V12 Z"/><path d="M16 23 21 28 32 17"/></svg>
-        </span>
-        <h3>Граница заповедной зоны</h3>
-        <p>Участок непосредственно примыкает к особо охраняемой природной территории — соседство, недоступное для большинства объектов в регионе.</p>
-      </div>
-      <div class="vip-card reveal" style="--i:1">
-        <span class="vip-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 14 20h20z"/><path d="M24 15 12 30h24z"/><path d="M24 24 10 40h28z"/><path d="M24 40v5"/></svg>
-        </span>
-        <h3>36 соток векового леса</h3>
-        <p>Собственная земля в окружении столетнего кедрового леса — редкость для благоустроенного участка такого масштаба.</p>
-      </div>
-      <div class="vip-card reveal" style="--i:2">
-        <span class="vip-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="21" width="24" height="18" rx="2"/><path d="M17 21V15a7 7 0 0 1 14 0v6"/></svg>
-        </span>
-        <h3>Приватность и статус</h3>
-        <p>П. Ульба называют «Рублёвкой» Восточного Казахстана — самый закрытый и тихий район Риддера, где ценят уединение.</p>
-      </div>
-      <div class="vip-card reveal" style="--i:3">
-        <span class="vip-icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 20c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/></svg>
-        </span>
-        <h3>Вода в шаговой доступности</h3>
-        <p>Пруд и река рядом с домом — рыбалка, отдых у воды и живописные пейзажи прямо за окном.</p>
-      </div>
-      <img class="vip-garland" src="images/branch-garland.webp" alt="" aria-hidden="true" width="1500" height="1249" loading="lazy" fetchpriority="low">
-    </div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <img class="tree-accent on-light about-1" src="images/branch-sprig.webp" alt="" aria-hidden="true" width="700" height="708" loading="lazy" fetchpriority="low">
-  <div class="container about-grid">
-    <svg class="trail-path" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M40,20 C160,70 60,150 190,190 C310,225 230,320 380,360 C460,382 420,440 520,470" fill="none" stroke="#17311f" stroke-width="2" stroke-dasharray="1 12" stroke-linecap="round" opacity="0.18"/>
-      <circle cx="40" cy="20" r="4" fill="#4a9463" opacity="0.35"/>
-      <circle cx="190" cy="190" r="4" fill="#4a9463" opacity="0.35"/>
-      <circle cx="380" cy="360" r="4" fill="#4a9463" opacity="0.35"/>
-      <circle cx="520" cy="470" r="4" fill="#4a9463" opacity="0.35"/>
-    </svg>
-    <div class="about-text reveal" style="--i:0">
-      <span class="section-label">О доме</span>
-      <h2>Дом на земле, которую не купить дважды</h2>
-      <p>Сосед этого участка — не чужой забор, а кедровый лес заповедника: строительство на таких землях запрещено законом. Значит, тишина и вид из окна останутся такими навсегда, что бы ни построили вокруг дальше.</p>
-      <p>Дом площадью 101.7&nbsp;м² расположен в посёлке Ульба города Риддер — районе, который по праву называют «Рублёвкой» Восточного Казахстана за его престиж, уединённость и природное окружение.</p>
-    </div>
-    <div class="about-highlights">
-      <div class="highlight reveal" style="--i:0">
-        <span class="highlight-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M8 22 24 8l16 14"/><path d="M12 20v20h24V20"/></svg></span>
-        <span class="highlight-number"><span class="counter" data-count="101.7" data-decimals="1">0</span></span>
-        <span class="highlight-label">м² площадь дома</span>
-      </div>
-      <div class="highlight reveal" style="--i:1">
-        <span class="highlight-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18V8h10M30 8h10v10M40 30v10H30M18 40H8V30"/></svg></span>
-        <span class="highlight-number"><span class="counter" data-count="36" data-decimals="0">0</span></span>
-        <span class="highlight-label">соток земли</span>
-      </div>
-      <div class="highlight reveal" style="--i:2">
-        <span class="highlight-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 14 20h20z"/><path d="M24 15 12 30h24z"/><path d="M24 24 10 40h28z"/></svg></span>
-        <span class="highlight-number"><span class="counter" data-count="100" data-decimals="0">0</span>%</span>
-        <span class="highlight-label">кедровый лес вокруг</span>
-      </div>
-      <div class="highlight reveal" style="--i:3">
-        <span class="highlight-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 20c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/></svg></span>
-        <span class="highlight-number"><span class="counter" data-count="2" data-decimals="0">0</span></span>
-        <span class="highlight-label">водоёма рядом: пруд и река</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt" id="features">
-  <div class="container">
-    <span class="section-label reveal" style="--i:0">Характеристики</span>
-    <h2 class="section-title reveal" style="--i:1">Что входит в усадьбу</h2>
-    <div class="features-grid">
-      <div class="feature-card reveal" style="--i:0">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M8 22 24 8l16 14"/><path d="M12 20v20h24V20"/><path d="M20 40V28h8v12"/></svg></span>
-        <h3>Дом</h3>
-        <p>Общая площадь 101.7 м², построен в 2022 году. Два этажа, просторные комнаты и балкон, продуманная планировка для семейной жизни и приёма гостей.</p>
-      </div>
-      <div class="feature-card reveal" style="--i:1">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18V8h10M30 8h10v10M40 30v10H30M18 40H8V30"/></svg></span>
-        <h3>Земельный участок</h3>
-        <p>36 соток собственной земли — достаточно для сада, хозяйственных построек, беседок и зон отдыха.</p>
-      </div>
-      <div class="feature-card accent reveal" style="--i:2">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 14 20h20z"/><path d="M24 15 12 30h24z"/><path d="M24 24 10 40h28z"/><path d="M24 40v5"/></svg></span>
-        <h3>Кедровый лес</h3>
-        <p>Участок примыкает к вековому кедровому лесу — естественная защита от ветра, чистейший воздух и уединённость.</p>
-      </div>
-      <div class="feature-card reveal" style="--i:3">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 20c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/></svg></span>
-        <h3>Пруд и река</h3>
-        <p>Рядом с домом расположены пруд и река — рыбалка, отдых у воды и живописные виды в шаговой доступности.</p>
-      </div>
-      <div class="feature-card accent reveal" style="--i:4">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="12" y="21" width="24" height="18" rx="2"/><path d="M17 21V15a7 7 0 0 1 14 0v6"/></svg></span>
-        <h3>Престижный район</h3>
-        <p>Посёлок Ульба известен как самый статусный и тихий район Риддера — здесь предпочитают жить те, кто ценит приватность.</p>
-      </div>
-      <div class="feature-card reveal" style="--i:5">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5v6M24 37v6M5 24h6M37 24h6"/><circle cx="24" cy="24" r="11"/></svg></span>
-        <h3>Адрес</h3>
-        <p>Казахстан, г. Риддер, п. Ульба, ул. Кедровская, 36А.</p>
-      </div>
-      <div class="feature-card reveal" style="--i:6">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8 40 18l-6 6-10-10z"/><path d="M24 14 10 28v6h6l14-14"/><path d="M10 34l4 4"/></svg></span>
-        <h3>Материалы и коммуникации</h3>
-        <p>Брусчатые стены, ленточный бетонный фундамент, кровля из металлочерепицы. Электричество подключено, автономное отопление на твёрдом топливе.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt" id="docs">
-  <div class="container">
-    <span class="section-label reveal" style="--i:0">Документы</span>
-    <h2 class="section-title reveal" style="--i:1">Документы в порядке</h2>
-    <p class="section-note reveal" style="--i:2">На дом и участок оформлены официальные документы Государственной корпорации «Правительство для граждан» — готовы к сделке.</p>
-    <div class="docs-grid">
-      <div class="feature-card reveal" style="--i:0">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l6 6v30H14z"/><path d="M28 6v6h6"/><path d="M18 24h12M18 30h12M18 36h8"/></svg></span>
-        <h3>Технический паспорт</h3>
-        <p>Полное описание строения с поэтажной экспликацией помещений.</p>
-      </div>
-      <div class="feature-card reveal" style="--i:1">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18V8h10M30 8h10v10M40 30v10H30M18 40H8V30"/></svg></span>
-        <h3>План земельного участка</h3>
-        <p>Землеустроительный план с границами и экспликацией, масштаб 1:500. Смотреть ниже.</p>
-      </div>
-      <div class="feature-card reveal" style="--i:2">
-        <span class="feature-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32"/><path d="M8 22h14M22 8v14M22 22h18"/></svg></span>
-        <h3>Поэтажные планы</h3>
-        <p>Планы 1 и 2 этажа дома с размерами комнат, масштаб 1:100.</p>
-      </div>
-    </div>
-
-    <div class="doc-photo doc-plot reveal" style="--i:3">
-      <img src="images/land-plot-plan.webp" alt="План земельного участка, масштаб 1:500" width="1054" height="1126" loading="lazy">
-      <span class="doc-photo-caption">План земельного участка · масштаб 1:500 · нажмите, чтобы увеличить</span>
-    </div>
-
-    <div class="floorplan">
-      <span class="section-label reveal" style="--i:3">Планировка</span>
-      <h3 class="floorplan-title reveal" style="--i:4">101.7 м² по техническому паспорту</h3>
-      <div class="floorplan-grid">
-        <div class="floorplan-col reveal" style="--i:0">
-          <div class="doc-photo">
-            <img src="images/floor-plan-1.webp" alt="План 1 этажа, масштаб 1:100" width="1054" height="656" loading="lazy">
-          </div>
-          <h4>1 этаж — 54.9 м²</h4>
-          <ul class="floorplan-list">
-            <li><span>Коридор</span><b>9.9 м²</b></li>
-            <li><span>Санузел</span><b>1.8 м²</b></li>
-            <li><span>Ванная</span><b>4.8 м²</b></li>
-            <li><span>Кухня</span><b>9.5 м²</b></li>
-            <li><span>Жилая комната</span><b>12.6 м²</b></li>
-            <li><span>Коридор</span><b>7.5 м²</b></li>
-            <li><span>Жилая комната</span><b>8.8 м²</b></li>
-          </ul>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-media" src="images/pond.webp" alt="Пруд и лес в природном окружении рядом с объектом" width="1300" height="866" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="shell hero-layout">
+        <div class="hero-copy">
+          <p class="overline hero-overline">Риддер · Восточный Казахстан</p>
+          <h1 id="hero-title">Частная территория<br>у кедрового леса</h1>
+          <p class="hero-intro">Дом площадью 101,7 м² и 36 соток земли у границы заповедной зоны в посёлке Ульба.</p>
+          <a class="text-link text-link-light" href="#object-index">Изучить объект <span aria-hidden="true">→</span></a>
         </div>
-        <div class="floorplan-col reveal" style="--i:1">
-          <div class="doc-photo">
-            <img src="images/floor-plan-2.webp" alt="План 2 этажа, масштаб 1:100" width="1054" height="627" loading="lazy">
-          </div>
-          <h4>2 этаж — 46.8 м²</h4>
-          <ul class="floorplan-list">
-            <li><span>Коридор</span><b>9.5 м²</b></li>
-            <li><span>Жилая комната</span><b>9.3 м²</b></li>
-            <li><span>Гостиная</span><b>9.9 м²</b></li>
-            <li><span>Жилая комната</span><b>13.6 м²</b></li>
-            <li><span>Балкон (коэф. 0.3)</span><b>4.5 м²</b></li>
-          </ul>
+        <dl class="hero-facts" aria-label="Ключевые характеристики объекта">
+          <div><dt>Дом</dt><dd>101,7 м²</dd></div>
+          <div><dt>Земля</dt><dd>36 соток</dd></div>
+          <div><dt>Год</dt><dd>2022</dd></div>
+          <div><dt>Стоимость</dt><dd>230 000 000 ₸</dd></div>
+        </dl>
+        <p class="hero-caption">Пруд расположен рядом с объектом и является частью природного окружения</p>
+      </div>
+    </section>
+
+    <section class="object-index section" id="object-index" aria-labelledby="index-title">
+      <div class="shell index-grid reveal">
+        <div class="section-marker">
+          <span>Property 01</span>
+          <p id="index-title">Кедровская, 36А</p>
+        </div>
+        <dl class="index-facts">
+          <div><dt>Площадь дома</dt><dd>101,7 м²</dd></div>
+          <div><dt>Земельный участок</dt><dd>36 соток</dd></div>
+          <div><dt>Количество этажей</dt><dd>2</dd></div>
+          <div><dt>Год постройки</dt><dd>2022</dd></div>
+        </dl>
+        <p class="index-location">Посёлок Ульба · город Риддер · Восточный Казахстан</p>
+      </div>
+    </section>
+
+    <section class="territory section" id="territory" aria-labelledby="territory-title">
+      <div class="shell editorial-grid">
+        <figure class="editorial-figure territory-figure reveal">
+          <button class="image-button" type="button" data-lightbox="images/river.webp" data-alt="Река, лес и горы в окрестностях Риддера" data-caption="Окрестности Риддера · река и лесной массив">
+            <img src="images/river.webp" alt="Река, лес и горы в окрестностях Риддера" width="1220" height="684" loading="lazy">
+          </button>
+          <figcaption><span>01</span> Окрестности Риддера · река и лесной массив</figcaption>
+        </figure>
+        <div class="editorial-copy reveal">
+          <p class="overline">01 / Территория</p>
+          <h2 id="territory-title">Земля как главное пространство объекта</h2>
+          <p class="lead">36 соток собственной земли рядом с кедровым лесом — пространство для уединённой жизни в природном окружении.</p>
+          <p>Участок граничит с заповедной зоной. Пруд и река находятся рядом с домом, дополняя характер этого места, но не входят в описание собственности.</p>
         </div>
       </div>
-      <div class="floorplan-total reveal" style="--i:2">
-        <span>Итого по дому</span>
-        <b>101.7 м²</b>
-        <span class="floorplan-total-note">жилая 54.2 м² · нежилая 47.5 м²</span>
+    </section>
+
+    <section class="house section-dark" id="house" aria-labelledby="house-title">
+      <div class="shell house-grid">
+        <div class="house-heading reveal">
+          <p class="overline overline-light">02 / Дом в окружении</p>
+          <h2 id="house-title">Архитектура — часть территории</h2>
+          <p>Двухэтажный дом построен в 2022 году. Пространство включает жилые комнаты, кухню, гостиную, балкон и крытую террасу.</p>
+        </div>
+        <figure class="house-main reveal">
+          <button class="image-button" type="button" data-lightbox="images/facade-wide.webp" data-alt="Дом на фоне леса и гор" data-caption="Дом и окружающий лес">
+            <img src="images/facade-wide.webp" alt="Дом на фоне леса и гор" width="1300" height="732" loading="lazy">
+          </button>
+          <figcaption><span>02</span> Дом и окружающий лес</figcaption>
+        </figure>
+        <dl class="house-spec reveal">
+          <div><dt>Площадь</dt><dd>101,7 м²</dd></div>
+          <div><dt>Этажи</dt><dd>2</dd></div>
+          <div><dt>Построен</dt><dd>2022</dd></div>
+          <div><dt>Участок</dt><dd>36 соток</dd></div>
+        </dl>
       </div>
+    </section>
+
+    <section class="materials section" aria-labelledby="materials-title">
+      <div class="shell materials-grid">
+        <div class="materials-copy reveal">
+          <p class="overline">03 / Архитектура и материалы</p>
+          <h2 id="materials-title">Дом, открытый к лесу</h2>
+          <p class="lead">Крытая терраса и большое остекление связывают внутреннее пространство с природным окружением.</p>
+          <dl class="spec-list">
+            <div><dt>Стены</dt><dd>Брусчатые</dd></div>
+            <div><dt>Фундамент</dt><dd>Ленточный бетонный</dd></div>
+            <div><dt>Кровля</dt><dd>Металлочерепица</dd></div>
+            <div><dt>Электричество</dt><dd>Подключено</dd></div>
+            <div><dt>Отопление</dt><dd>Автономное, на твёрдом топливе</dd></div>
+          </dl>
+        </div>
+        <figure class="terrace-figure reveal">
+          <button class="image-button" type="button" data-lightbox="images/terrace-balcony.webp" data-alt="Крытая терраса второго этажа" data-caption="Крытая терраса · дерево, остекление и лес">
+            <img src="images/terrace-balcony.webp" alt="Крытая терраса второго этажа" width="960" height="720" loading="lazy">
+          </button>
+          <figcaption><span>03</span> Крытая терраса · дерево, остекление и лес</figcaption>
+        </figure>
+        <figure class="interior-figure reveal">
+          <button class="image-button" type="button" data-lightbox="images/interior-stairwell.webp" data-alt="Лестничная зона с деревянными и металлическими деталями" data-caption="Лестничная зона · дерево, металл и каменная фактура">
+            <img src="images/interior-stairwell.webp" alt="Лестничная зона с деревянными и металлическими деталями" width="960" height="720" loading="lazy">
+          </button>
+          <figcaption><span>04</span> Лестничная зона · дерево, металл и каменная фактура</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="plans section-paper" id="plans" aria-labelledby="plans-title">
+      <div class="shell">
+        <div class="plans-heading reveal">
+          <div><p class="overline">04 / Планировка</p><h2 id="plans-title">101,7 м² на двух этажах</h2></div>
+          <p>Площадь указана по техническому паспорту: 54,9 м² на первом этаже и 46,8 м² на втором.</p>
+        </div>
+
+        <article class="plot-plan reveal">
+          <div class="plan-label"><span>00</span><h3>План земельного участка</h3><p>Масштаб 1:500</p></div>
+          <button class="plan-image image-button" type="button" data-lightbox="images/land-plot-plan.webp" data-alt="План земельного участка, масштаб 1:500" data-caption="План земельного участка · масштаб 1:500">
+            <img src="images/land-plot-plan.webp" alt="План земельного участка, масштаб 1:500" width="1054" height="1126" loading="lazy">
+          </button>
+        </article>
+
+        <div class="floor-grid">
+          <article class="floor reveal">
+            <div class="plan-label"><span>01</span><h3>Первый этаж</h3><p>54,9 м²</p></div>
+            <button class="plan-image image-button" type="button" data-lightbox="images/floor-plan-1.webp" data-alt="План первого этажа, масштаб 1:100" data-caption="Первый этаж · 54,9 м² · масштаб 1:100">
+              <img src="images/floor-plan-1.webp" alt="План первого этажа, масштаб 1:100" width="1054" height="656" loading="lazy">
+            </button>
+            <dl class="room-list">
+              <div><dt>Коридор</dt><dd>9,9 м²</dd></div><div><dt>Санузел</dt><dd>1,8 м²</dd></div>
+              <div><dt>Ванная</dt><dd>4,8 м²</dd></div><div><dt>Кухня</dt><dd>9,5 м²</dd></div>
+              <div><dt>Жилая комната</dt><dd>12,6 м²</dd></div><div><dt>Коридор</dt><dd>7,5 м²</dd></div>
+              <div><dt>Жилая комната</dt><dd>8,8 м²</dd></div>
+            </dl>
+          </article>
+          <article class="floor reveal">
+            <div class="plan-label"><span>02</span><h3>Второй этаж</h3><p>46,8 м²</p></div>
+            <button class="plan-image image-button" type="button" data-lightbox="images/floor-plan-2.webp" data-alt="План второго этажа, масштаб 1:100" data-caption="Второй этаж · 46,8 м² · масштаб 1:100">
+              <img src="images/floor-plan-2.webp" alt="План второго этажа, масштаб 1:100" width="1054" height="627" loading="lazy">
+            </button>
+            <dl class="room-list">
+              <div><dt>Коридор</dt><dd>9,5 м²</dd></div><div><dt>Жилая комната</dt><dd>9,3 м²</dd></div>
+              <div><dt>Гостиная</dt><dd>9,9 м²</dd></div><div><dt>Жилая комната</dt><dd>13,6 м²</dd></div>
+              <div><dt>Балкон (коэф. 0,3)</dt><dd>4,5 м²</dd></div>
+            </dl>
+          </article>
+        </div>
+        <div class="plan-total reveal"><span>Итого по дому</span><strong>101,7 м²</strong><small>жилая 54,2 м² · нежилая 47,5 м²</small></div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell gallery-heading reveal">
+        <p class="overline">05 / Наблюдения</p>
+        <h2 id="gallery-title">Дом и природное окружение</h2>
+      </div>
+      <div class="shell gallery-flow">
+        <figure class="gallery-item gallery-primary reveal">
+          <button class="image-button" type="button" data-lightbox="images/facade-front.webp" data-alt="Главный фасад дома с балконом" data-caption="Главный фасад дома">
+            <img src="images/facade-front.webp" alt="Главный фасад дома с балконом" width="1300" height="733" loading="lazy">
+          </button><figcaption><span>05</span> Главный фасад дома</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-side reveal">
+          <button class="image-button" type="button" data-lightbox="images/pond-night.webp" data-alt="Река рядом с домом в вечернее время" data-caption="Вечер у воды · природное окружение рядом с объектом">
+            <img src="images/pond-night.webp" alt="Река рядом с домом в вечернее время" width="720" height="1079" loading="lazy">
+          </button><figcaption><span>06</span> Вечер у воды · рядом с объектом</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-detail reveal">
+          <button class="image-button" type="button" data-lightbox="images/side-roof.webp" data-alt="Боковой фасад и кровля дома" data-caption="Боковой фасад · кровля и отделка">
+            <img src="images/side-roof.webp" alt="Боковой фасад и кровля дома" width="1300" height="732" loading="lazy">
+          </button><figcaption><span>07</span> Боковой фасад · кровля и отделка</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-wide reveal">
+          <button class="image-button" type="button" data-lightbox="images/wall-siding.webp" data-alt="Фасадная отделка дома" data-caption="Материалы фасада и крытая галерея">
+            <img src="images/wall-siding.webp" alt="Фасадная отделка дома" width="1300" height="732" loading="lazy">
+          </button><figcaption><span>08</span> Материалы фасада и крытая галерея</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="location section-paper" id="location" aria-labelledby="location-title">
+      <div class="shell location-grid">
+        <div class="location-copy reveal">
+          <p class="overline">06 / Локация</p>
+          <h2 id="location-title">Посёлок Ульба,<br>город Риддер</h2>
+          <p class="lead">Природное окружение Восточного Казахстана, у границы заповедной территории.</p>
+          <address>Казахстан, Восточно-Казахстанская область,<br>г. Риддер, п. Ульба, ул. Кедровская, 36А</address>
+        </div>
+        <div class="map-frame reveal">
+          <iframe title="Карта расположения объекта" src="https://www.openstreetmap.org/export/embed.html?bbox=83.45%2C50.28%2C83.55%2C50.34&amp;layer=mapnik" loading="lazy"></iframe>
+          <p>Кедровская, 36А · Риддер</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details section" aria-labelledby="details-title">
+      <div class="shell details-grid">
+        <div class="reveal"><p class="overline">07 / Сведения</p><h2 id="details-title">Основные характеристики</h2></div>
+        <div class="details-register reveal">
+          <section><h3>Объект</h3><dl>
+            <div><dt>Адрес</dt><dd>Кедровская, 36А</dd></div><div><dt>Площадь дома</dt><dd>101,7 м²</dd></div>
+            <div><dt>Количество этажей</dt><dd>2</dd></div><div><dt>Год постройки</dt><dd>2022</dd></div>
+            <div><dt>Площадь участка</dt><dd>36 соток</dd></div>
+          </dl></section>
+          <section><h3>Конструкция и коммуникации</h3><dl>
+            <div><dt>Стены</dt><dd>Брусчатые</dd></div><div><dt>Фундамент</dt><dd>Ленточный бетонный</dd></div>
+            <div><dt>Кровля</dt><dd>Металлочерепица</dd></div><div><dt>Электричество</dt><dd>Подключено</dd></div>
+            <div><dt>Отопление</dt><dd>Автономное, на твёрдом топливе</dd></div>
+          </dl></section>
+          <section><h3>Окружение</h3><dl>
+            <div><dt>Лес</dt><dd>Кедровый лес рядом с участком</dd></div>
+            <div><dt>Вода</dt><dd>Пруд и река рядом</dd></div>
+            <div><dt>Заповедная зона</dt><dd>Участок находится у её границы</dd></div>
+          </dl></section>
+        </div>
+      </div>
+    </section>
+
+    <section class="price" id="price" aria-labelledby="price-title">
+      <div class="shell price-grid reveal">
+        <p class="overline overline-light">08 / Стоимость</p>
+        <div>
+          <h2 id="price-title">230 000 000 <span>₸</span></h2>
+          <p>Продажа собственником</p>
+        </div>
+        <a class="text-link text-link-light" href="#contact">Запросить материалы <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div class="contact-copy reveal">
+          <p class="overline">Private enquiry</p>
+          <h2 id="contact-title">Запросить частную презентацию объекта</h2>
+          <p class="lead">Оставьте контакт — мы свяжемся с вами, чтобы обсудить объект и организовать просмотр.</p>
+          <p class="contact-meta"><span>Адрес объекта</span>Казахстан, г. Риддер, п. Ульба,<br>ул. Кедровская, 36А</p>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-field"><label for="name">Имя</label><input type="text" id="name" name="name" autocomplete="name" maxlength="100" required></div>
+          <div class="form-field"><label for="phone">Телефон</label><input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40" inputmode="tel" required></div>
+          <button class="submit-button" type="submit">Отправить запрос <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <a class="wordmark footer-wordmark" href="#top"><span>Кедровская 36А</span><small>Private property · Ridder</small></a>
+      <p>© <span id="year"></span> Кедровская, 36А</p>
+      <p>Продажа собственником</p>
     </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Закрыть просмотр">Закрыть <span aria-hidden="true">×</span></button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Предыдущее изображение">←</button>
+    <figure><img src="" alt="" id="lightbox-img"><figcaption id="lightbox-caption"></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Следующее изображение">→</button>
+    <p class="lightbox-count" id="lightbox-count" aria-live="polite"></p>
   </div>
-</section>
 
-<section class="section" id="gallery">
-  <div class="container">
-    <span class="section-label reveal" style="--i:0">Галерея</span>
-    <h2 class="section-title reveal" style="--i:1">Дом и окрестности</h2>
-    <p class="section-note reveal" style="--i:2">Терраса, интерьеры и вечерний вид на реку у дома.</p>
-    <div class="gallery-grid">
-      <div class="gallery-photo large reveal" style="--i:0"><img src="images/facade-front.webp" alt="Фасад дома с балконом" width="1300" height="733" loading="lazy"></div>
-      <div class="gallery-photo reveal" style="--i:1"><img src="images/facade-wide.webp" alt="Дом на фоне леса и гор" width="1300" height="732" loading="lazy"></div>
-      <div class="gallery-photo reveal" style="--i:2"><img src="images/side-roof.webp" alt="Дом со стороны крыши и котельной" width="1300" height="732" loading="lazy"></div>
-      <div class="gallery-photo reveal" style="--i:3"><img src="images/wall-siding.webp" alt="Фасад дома, боковая стена" width="1300" height="732" loading="lazy"></div>
-      <div class="gallery-photo reveal" style="--i:4"><img src="images/terrace-balcony.webp" alt="Крытая терраса второго этажа" width="960" height="720" loading="lazy"></div>
-      <div class="gallery-photo reveal" style="--i:5"><img src="images/interior-stairwell.webp" alt="Лестница и каменная отделка стены в доме" width="960" height="720" loading="lazy"></div>
-      <div class="gallery-photo reveal" style="--i:6"><img src="images/pond.webp" alt="Пруд рядом с участком" width="1300" height="866" loading="lazy"></div>
-      <div class="gallery-photo tall reveal" style="--i:7"><img src="images/pond-night.webp" alt="Река у дома вечером с гирляндой огней" width="720" height="1079" loading="lazy"></div>
-      <div class="gallery-photo banner reveal" style="--i:8"><img src="images/river.webp" alt="Река рядом с участком, вид сверху" width="1220" height="684" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt location-section" id="location">
-  <div class="location-map-full reveal">
-    <iframe
-      title="Карта расположения участка"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=83.45%2C50.28%2C83.55%2C50.34&layer=mapnik"
-      loading="lazy">
-    </iframe>
-    <span class="location-pin">ул. Кедровская, 36А</span>
-  </div>
-  <div class="container">
-    <div class="location-panel reveal" style="--i:1">
-      <div class="compass-accent" aria-hidden="true">
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
-          <circle cx="50" cy="50" r="46"/>
-          <circle cx="50" cy="50" r="34"/>
-          <path d="M50 4 V16 M50 84 V96 M4 50 H16 M84 50 H96" stroke-width="1.2"/>
-          <path d="M50 20 L58 50 L50 80 L42 50 Z" fill="currentColor" stroke="none" opacity="0.8"/>
-        </svg>
-      </div>
-      <span class="section-label">Локация</span>
-      <h2>Посёлок Ульба, город Риддер</h2>
-      <p>Ульба — район, окружённый лесами и горами Восточного Казахстана, у самой границы заповедной территории. Вдали от городского шума, но с сохранённой доступностью инфраструктуры Риддера.</p>
-      <p class="location-address">Казахстан, Восточно-Казахстанская область, г. Риддер, п. Ульба, ул. Кедровская, 36А.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section price-section" id="price">
-  <div class="container price-content">
-    <div class="price-frame reveal" style="--i:0">
-      <div class="seal-badge" aria-hidden="true">
-        <svg viewBox="0 0 200 200">
-          <defs>
-            <path id="sealCircle" d="M100,25 a75,75 0 1,1 -0.1,0"/>
-          </defs>
-          <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1"/>
-          <circle cx="100" cy="100" r="68" fill="none" stroke="currentColor" stroke-width="1"/>
-          <text font-size="12.5" letter-spacing="2.5">
-            <textPath href="#sealCircle" startOffset="0%">· УСАДЬБА · КЕДРОВСКАЯ 36А · ЗАПОВЕДНАЯ ЗОНА</textPath>
-          </text>
-          <path d="M100 66 88 92h9 -20 46h-20l22 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <span class="section-label section-label-light">Стоимость</span>
-      <h2 class="price-title">230 000 000 тенге</h2>
-      <div class="price-alt">
-        <span>≈ 43 400 000 ₽</span>
-        <span class="price-divider">·</span>
-        <span>≈ 515 000 $</span>
-      </div>
-      <p class="price-note">Продажа собственником. Готовы организовать показ участка и оформление сделки в сжатые сроки.</p>
-      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-text reveal" style="--i:0">
-      <span class="section-label">Связаться с нами</span>
-      <h2>Хотите узнать больше об усадьбе?</h2>
-      <p>Оставьте имя и телефон — мы свяжемся с вами в ближайшее время и договоримся об осмотре участка.</p>
-      <div class="contact-address">
-        <strong>Адрес объекта</strong>
-        <span>Казахстан, г. Риддер, п. Ульба, ул. Кедровская, 36А</span>
-      </div>
-    </div>
-    <form class="contact-form reveal" style="--i:1" id="contact-form" novalidate>
-      <div class="form-row">
-        <label for="name">Имя</label>
-        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-      </div>
-      <div class="form-row">
-        <label for="phone">Телефон</label>
-        <input type="tel" id="phone" name="phone" placeholder="+7 ___ ___ __ __" required>
-      </div>
-      <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
-      <p class="form-status" id="form-status" role="status"></p>
-    </form>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <img class="footer-branch" src="images/branch-full.webp" alt="" aria-hidden="true" width="700" height="540" loading="lazy" fetchpriority="low">
-  <div class="container">
-    <span class="footer-label">Кедровская, 36А</span>
-    <div class="footer-inner">
-      <span>© <span id="year"></span> Усадьба на Кедровской, 36А</span>
-      <span>Казахстан, г. Риддер, п. Ульба, ул. Кедровская, 36А</span>
-    </div>
-  </div>
-</footer>
-
-<a href="#contact" class="floating-cta" id="floating-cta">Оставить заявку</a>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">&times;</button>
-  <img src="" alt="" id="lightbox-img">
-</div>
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
