@@ -106,7 +106,7 @@ lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLigh
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
 /* Contact form -> Telegram (via a relay that keeps the bot token secret, see README) */
-const TELEGRAM_RELAY_URL = 'ВСТАВЬТЕ_URL_CLOUDFLARE_WORKER';
+const TELEGRAM_RELAY_URL = 'https://ridder-house-site-relay.vercel.app/api/telegram';
 
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
