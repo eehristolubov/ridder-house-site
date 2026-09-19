@@ -20,25 +20,25 @@
 
 ## Форма обратной связи → Telegram
 
-Форма (имя + телефон) отправляет заявку через Cloudflare Worker-прокси, который прячет
+Форма (имя + телефон) отправляет заявку через serverless-функцию, которая прячет
 токен Telegram-бота (его нельзя хранить в коде публичного репозитория — это скомпрометирует бота).
 
-Код прокси: `telegram-relay/worker.js`.
+Код функции: `api/telegram.js` (формат Vercel Serverless Functions).
 
-### Как развернуть прокси
+### Как развернуть прокси (Vercel, бесплатно, без карты)
 
-1. Зарегистрируйтесь на [dash.cloudflare.com](https://dash.cloudflare.com/) (бесплатно, без карты).
-2. **Workers & Pages** → **Create** → **Create Worker** → задайте имя (например `kedrovskaya-relay`) → **Deploy**.
-3. Откройте **Edit code**, вставьте содержимое `telegram-relay/worker.js`, **Save and Deploy**.
-4. **Settings** → **Variables** → добавьте два **secret**-переменных (не обычных, а зашифрованных):
+1. Зайдите на [vercel.com](https://vercel.com/) → **Continue with GitHub** → авторизуйте вход тем же аккаунтом, что и репозиторий.
+2. **Add New…** → **Project** → выберите репозиторий `ridder-house-site` → **Deploy** (настройки по умолчанию подходят, ничего менять не нужно).
+3. После деплоя откройте проект → **Settings** → **Environment Variables**, добавьте:
    - `TELEGRAM_BOT_TOKEN` — токен бота от @BotFather
    - `TELEGRAM_CHAT_ID` — ваш chat_id (узнать через @userinfobot)
-   - **Save and Deploy** ещё раз, чтобы секреты применились.
-5. Скопируйте URL воркера (вида `https://kedrovskaya-relay.<ваш-логин>.workers.dev`).
-6. Вставьте этот URL в `js/script.js` в константу `TELEGRAM_RELAY_URL`.
+4. Вкладка **Deployments** → у последнего деплоя откройте меню **⋯** → **Redeploy**, чтобы переменные применились.
+5. Скопируйте домен проекта (вида `https://ridder-house-site.vercel.app`).
+6. В `js/script.js` вставьте в константу `TELEGRAM_RELAY_URL` адрес `https://<ваш-домен>/api/telegram`.
 
 Токен бота нигде не появляется в коде сайта и в git-репозитории — он хранится только
-в зашифрованных переменных Cloudflare.
+в переменных окружения Vercel. Сам сайт по-прежнему открывается на GitHub Pages — Vercel
+здесь используется только ради этой одной функции.
 
 ## Деплой
 
