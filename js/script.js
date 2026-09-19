@@ -105,9 +105,8 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
-/* Contact form -> Telegram */
-const TELEGRAM_BOT_TOKEN = 'ВСТАВЬТЕ_ТОКЕН_БОТА';
-const TELEGRAM_CHAT_ID = 'ВСТАВЬТЕ_CHAT_ID';
+/* Contact form -> Telegram (via a relay that keeps the bot token secret, see README) */
+const TELEGRAM_RELAY_URL = 'ВСТАВЬТЕ_URL_CLOUDFLARE_WORKER';
 
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
@@ -129,22 +128,20 @@ form.addEventListener('submit', async (e) => {
   status.textContent = 'Отправляем...';
   status.className = 'form-status';
 
-  const text =
-    'Новая заявка с сайта «Кедровская, 36А»%0A' +
-    'Имя: ' + encodeURIComponent(name) + '%0A' +
-    'Телефон: ' + encodeURIComponent(phone);
-
   try {
-    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${text}`;
-    const response = await fetch(url);
+    const response = await fetch(TELEGRAM_RELAY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone })
+    });
     const data = await response.json();
 
-    if (data.ok) {
+    if (response.ok && data.ok) {
       status.textContent = 'Спасибо! Заявка отправлена, мы свяжемся с вами в ближайшее время.';
       status.className = 'form-status success';
       form.reset();
     } else {
-      throw new Error(data.description || 'Telegram API error');
+      throw new Error(data.error || 'Relay error');
     }
   } catch (err) {
     status.textContent = 'Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам напрямую.';

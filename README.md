@@ -18,13 +18,27 @@
    ```
    и добавьте в `css/style.css` класс `.gallery-photo { width:100%; height:100%; object-fit:cover; }`.
 
-## Форма обратной связи
+## Форма обратной связи → Telegram
 
-Сейчас форма работает только на клиенте (показывает сообщение об успехе, ничего никуда не отправляет).
-Чтобы заявки реально приходили, подключите один из вариантов:
+Форма (имя + телефон) отправляет заявку через Cloudflare Worker-прокси, который прячет
+токен Telegram-бота (его нельзя хранить в коде публичного репозитория — это скомпрометирует бота).
 
-- **Formspree / Getform / Web3Forms** — бесплатные сервисы приёма форм без бэкенда (просто меняете `action` формы на URL сервиса).
-- Свой backend/serverless-функция, если нужен полный контроль.
+Код прокси: `telegram-relay/worker.js`.
+
+### Как развернуть прокси
+
+1. Зарегистрируйтесь на [dash.cloudflare.com](https://dash.cloudflare.com/) (бесплатно, без карты).
+2. **Workers & Pages** → **Create** → **Create Worker** → задайте имя (например `kedrovskaya-relay`) → **Deploy**.
+3. Откройте **Edit code**, вставьте содержимое `telegram-relay/worker.js`, **Save and Deploy**.
+4. **Settings** → **Variables** → добавьте два **secret**-переменных (не обычных, а зашифрованных):
+   - `TELEGRAM_BOT_TOKEN` — токен бота от @BotFather
+   - `TELEGRAM_CHAT_ID` — ваш chat_id (узнать через @userinfobot)
+   - **Save and Deploy** ещё раз, чтобы секреты применились.
+5. Скопируйте URL воркера (вида `https://kedrovskaya-relay.<ваш-логин>.workers.dev`).
+6. Вставьте этот URL в `js/script.js` в константу `TELEGRAM_RELAY_URL`.
+
+Токен бота нигде не появляется в коде сайта и в git-репозитории — он хранится только
+в зашифрованных переменных Cloudflare.
 
 ## Деплой
 
