@@ -19,6 +19,19 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-house" viewBox="0 0 48 48"><path d="M7 22 24 7l17 15M11 19v22h26V19M19 41V29h10v12"/></symbol>
+    <symbol id="icon-plot" viewBox="0 0 48 48"><path d="M7 8h12M7 8v12M41 8H29M41 8v12M7 40h12M7 40V28M41 40H29M41 40V28"/><path d="M15 33 22 15l11 18Z"/></symbol>
+    <symbol id="icon-levels" viewBox="0 0 48 48"><path d="M7 12h34L24 25 7 12Z M7 25h34L24 38 7 25Z"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31"/><path d="M15 6v9M33 6v9M7 20h34M15 27h4M24 27h4M33 27h1M15 34h4M24 34h4"/></symbol>
+    <symbol id="icon-tree" viewBox="0 0 48 48"><path d="M24 5 14 20h7L11 32h10l-5 9h16l-5-9h10L27 20h7L24 5ZM24 41v4"/></symbol>
+    <symbol id="icon-boundary" viewBox="0 0 48 48"><path d="M8 40V13M40 40V13M5 13h6M37 13h6M13 34c7-10 15-10 22 0"/></symbol>
+    <symbol id="icon-water" viewBox="0 0 48 48"><path d="M5 21c5-5 9-5 14 0s9 5 14 0 7-4 10-1M5 32c5-5 9-5 14 0s9 5 14 0 7-4 10-1"/></symbol>
+    <symbol id="icon-terrace" viewBox="0 0 48 48"><path d="M5 38h38M9 38V18h30v20M6 18h36M15 18v20M33 18v20M5 12h38"/></symbol>
+    <symbol id="icon-bolt" viewBox="0 0 48 48"><path d="m28 5-15 23h11l-3 15 15-24H25l3-14Z"/></symbol>
+    <symbol id="icon-heat" viewBox="0 0 48 48"><path d="M14 36c-5-7 5-11 0-19M24 36c-5-7 5-11 0-19M34 36c-5-7 5-11 0-19M7 42h34"/></symbol>
+    <symbol id="icon-roof" viewBox="0 0 48 48"><path d="M5 36 20 9l23 27M15 36l9-17 15 17"/></symbol>
+  </svg>
 
   <header class="site-header" id="site-header">
     <div class="shell header-inner">
@@ -56,22 +69,6 @@
       </div>
     </section>
 
-    <section class="object-index section" id="object-index" aria-labelledby="index-title">
-      <div class="shell index-grid reveal">
-        <div class="section-marker">
-          <span>Property 01</span>
-          <p id="index-title">Кедровская, 36А</p>
-        </div>
-        <dl class="index-facts">
-          <div><dt>Земельный участок</dt><dd>36 соток</dd></div>
-          <div><dt>Площадь дома</dt><dd>101,7 м²</dd></div>
-          <div><dt>Количество этажей</dt><dd>2</dd></div>
-          <div><dt>Год постройки</dt><dd>2022</dd></div>
-        </dl>
-        <p class="index-location">Посёлок Ульба · город Риддер · Восточный Казахстан</p>
-      </div>
-    </section>
-
     <section class="house section-dark" id="house" aria-labelledby="house-title">
       <div class="shell house-grid">
         <div class="house-heading reveal">
@@ -79,28 +76,54 @@
           <h2 id="house-title">Продуманное пространство для комфортной жизни</h2>
           <p>Планировка двухэтажного дома объединяет жилые комнаты, кухню, гостиную, балкон и крытую террасу.</p>
         </div>
+        <dl class="architectural-facts reveal" aria-label="Основные характеристики объекта">
+          <div><svg aria-hidden="true"><use href="#icon-plot"/></svg><dt>Земельный участок</dt><dd>36 соток</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-house"/></svg><dt>Площадь дома</dt><dd>101,7 м²</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-levels"/></svg><dt>Этажность</dt><dd>2 этажа</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-calendar"/></svg><dt>Год постройки</dt><dd>2022</dd></div>
+        </dl>
         <figure class="house-main reveal">
           <button class="image-button" type="button" data-lightbox="images/facade-front.webp" data-alt="Главный фасад дома с балконом" data-caption="Главный фасад дома">
             <img src="images/facade-front.webp" alt="Главный фасад дома с балконом" width="1300" height="733" loading="lazy">
           </button>
           <figcaption><span>01</span> Главный фасад дома</figcaption>
         </figure>
+        <aside class="house-annotations reveal" aria-label="Архитектурные особенности">
+          <p class="annotation-index">Residence / 01</p>
+          <div><span>01.1</span><p>Двухэтажный объём с крытой галереей</p></div>
+          <div><span>01.2</span><p>Балкон вдоль главного фасада</p></div>
+          <div><span>01.3</span><p>Остекление обращено к природному окружению</p></div>
+        </aside>
       </div>
     </section>
 
     <section class="territory section" id="territory" aria-labelledby="territory-title">
-      <div class="shell editorial-grid">
-        <figure class="editorial-figure territory-figure reveal">
+      <div class="shell territory-grid">
+        <div class="territory-heading reveal">
+          <p class="overline">02 / Территория</p>
+          <h2 id="territory-title">Земля как главное пространство объекта</h2>
+        </div>
+        <div class="territory-intro reveal">
+          <strong>36 соток</strong>
+          <p>собственной земли рядом с кедровым лесом — пространство для уединённой жизни в природном окружении.</p>
+        </div>
+        <figure class="territory-figure reveal">
           <button class="image-button" type="button" data-lightbox="images/river.webp" data-alt="Река, лес и горы в окрестностях Риддера" data-caption="Окрестности Риддера · река и лесной массив">
             <img src="images/river.webp" alt="Река, лес и горы в окрестностях Риддера" width="1220" height="684" loading="lazy">
           </button>
-          <figcaption><span>01</span> Окрестности Риддера · река и лесной массив</figcaption>
+          <figcaption><span>02.1</span> Окрестности Риддера · река и лесной массив</figcaption>
         </figure>
-        <div class="editorial-copy reveal">
-          <p class="overline">02 / Территория</p>
-          <h2 id="territory-title">Земля как главное пространство объекта</h2>
-          <p class="lead">36 соток собственной земли рядом с кедровым лесом — пространство для уединённой жизни в природном окружении.</p>
-          <p>Участок граничит с заповедной зоной. Пруд и река находятся рядом с домом, дополняя характер этого места, но не входят в описание собственности.</p>
+        <figure class="territory-plan reveal">
+          <button class="image-button" type="button" data-lightbox="images/land-plot-plan.webp" data-alt="План земельного участка, масштаб 1:500" data-caption="План земельного участка · масштаб 1:500">
+            <img src="images/land-plot-plan.webp" alt="План земельного участка, масштаб 1:500" width="1054" height="1126" loading="lazy">
+          </button>
+          <figcaption><span>02.2</span> Документальный план участка · 1:500</figcaption>
+        </figure>
+        <div class="territory-notes reveal">
+          <div><svg aria-hidden="true"><use href="#icon-tree"/></svg><p><strong>Кедровый лес</strong><span>расположен рядом с участком</span></p></div>
+          <div><svg aria-hidden="true"><use href="#icon-boundary"/></svg><p><strong>Заповедная зона</strong><span>участок находится у её границы</span></p></div>
+          <div><svg aria-hidden="true"><use href="#icon-water"/></svg><p><strong>Пруд и река</strong><span>находятся рядом с объектом</span></p></div>
+          <p class="legal-note">Пруд и река относятся к природному окружению и не входят в состав собственности.</p>
         </div>
       </div>
     </section>
@@ -109,15 +132,8 @@
       <div class="shell materials-grid">
         <div class="materials-copy reveal">
           <p class="overline">03 / Архитектура и материалы</p>
-          <h2 id="materials-title">Архитектура и материалы</h2>
+          <h2 id="materials-title">Материалы, открытые природному окружению</h2>
           <p class="lead">Крытая терраса и большое остекление связывают внутреннее пространство с природным окружением.</p>
-          <dl class="spec-list">
-            <div><dt>Стены</dt><dd>Брусчатые</dd></div>
-            <div><dt>Фундамент</dt><dd>Ленточный бетонный</dd></div>
-            <div><dt>Кровля</dt><dd>Металлочерепица</dd></div>
-            <div><dt>Электричество</dt><dd>Подключено</dd></div>
-            <div><dt>Отопление</dt><dd>Автономное, на твёрдом топливе</dd></div>
-          </dl>
         </div>
         <figure class="terrace-figure reveal">
           <button class="image-button" type="button" data-lightbox="images/terrace-balcony.webp" data-alt="Крытая терраса второго этажа" data-caption="Крытая терраса · дерево, остекление и лес">
@@ -125,12 +141,25 @@
           </button>
           <figcaption><span>03</span> Крытая терраса · дерево, остекление и лес</figcaption>
         </figure>
-        <figure class="interior-figure reveal">
-          <button class="image-button" type="button" data-lightbox="images/facade-wide.webp" data-alt="Дом на фоне леса и гор" data-caption="Дом в природном окружении">
-            <img src="images/facade-wide.webp" alt="Дом на фоне леса и гор" width="1300" height="732" loading="lazy">
+        <figure class="construction-figure reveal">
+          <button class="image-button" type="button" data-lightbox="images/side-roof.webp" data-alt="Боковой фасад и кровля дома" data-caption="Боковой фасад · кровля и конструктив">
+            <img src="images/side-roof.webp" alt="Боковой фасад и кровля дома" width="1300" height="732" loading="lazy">
           </button>
-          <figcaption><span>04</span> Дом в природном окружении</figcaption>
+          <figcaption><span>03.2</span> Боковой фасад · кровля и конструктив</figcaption>
         </figure>
+        <figure class="facade-detail reveal">
+          <button class="image-button" type="button" data-lightbox="images/wall-siding.webp" data-alt="Материалы фасада дома" data-caption="Фасадная отделка и крытая галерея">
+            <img src="images/wall-siding.webp" alt="Материалы фасада дома" width="1300" height="732" loading="lazy">
+          </button>
+          <figcaption><span>03.3</span> Фасадная отделка и крытая галерея</figcaption>
+        </figure>
+        <dl class="material-strip reveal">
+          <div><svg aria-hidden="true"><use href="#icon-house"/></svg><dt>Стены</dt><dd>Брусчатые</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-boundary"/></svg><dt>Фундамент</dt><dd>Ленточный бетонный</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-roof"/></svg><dt>Кровля</dt><dd>Металлочерепица</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-bolt"/></svg><dt>Электричество</dt><dd>Подключено</dd></div>
+          <div><svg aria-hidden="true"><use href="#icon-heat"/></svg><dt>Отопление</dt><dd>Автономное, на твёрдом топливе</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -140,13 +169,6 @@
           <div><p class="overline">04 / Планировка</p><h2 id="plans-title">101,7 м² на двух этажах</h2></div>
           <p>Площадь указана по техническому паспорту: 54,9 м² на первом этаже и 46,8 м² на втором.</p>
         </div>
-
-        <article class="plot-plan reveal">
-          <div class="plan-label"><span>00</span><h3>План земельного участка</h3><p>Масштаб 1:500</p></div>
-          <button class="plan-image image-button" type="button" data-lightbox="images/land-plot-plan.webp" data-alt="План земельного участка, масштаб 1:500" data-caption="План земельного участка · масштаб 1:500">
-            <img src="images/land-plot-plan.webp" alt="План земельного участка, масштаб 1:500" width="1054" height="1126" loading="lazy">
-          </button>
-        </article>
 
         <div class="floor-grid">
           <article class="floor reveal">
@@ -179,8 +201,9 @@
 
     <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
       <div class="shell gallery-heading reveal">
-        <p class="overline">05 / Наблюдения</p>
-        <h2 id="gallery-title">Дом и природное окружение</h2>
+        <p class="overline">05 / Окружение</p>
+        <h2 id="gallery-title">Лес, вода и тишина вокруг</h2>
+        <p>Природные ландшафты рядом с объектом задают повседневный ритм места.</p>
       </div>
       <div class="shell gallery-flow">
         <figure class="gallery-item gallery-primary reveal">
@@ -193,16 +216,7 @@
             <img src="images/pond-night.webp" alt="Река рядом с домом в вечернее время" width="720" height="1079" loading="lazy">
           </button><figcaption><span>06</span> Вечер у воды · рядом с объектом</figcaption>
         </figure>
-        <figure class="gallery-item gallery-detail reveal">
-          <button class="image-button" type="button" data-lightbox="images/side-roof.webp" data-alt="Боковой фасад и кровля дома" data-caption="Боковой фасад · кровля и отделка">
-            <img src="images/side-roof.webp" alt="Боковой фасад и кровля дома" width="1300" height="732" loading="lazy">
-          </button><figcaption><span>07</span> Боковой фасад · кровля и отделка</figcaption>
-        </figure>
-        <figure class="gallery-item gallery-wide reveal">
-          <button class="image-button" type="button" data-lightbox="images/wall-siding.webp" data-alt="Фасадная отделка дома" data-caption="Материалы фасада и крытая галерея">
-            <img src="images/wall-siding.webp" alt="Фасадная отделка дома" width="1300" height="732" loading="lazy">
-          </button><figcaption><span>08</span> Материалы фасада и крытая галерея</figcaption>
-        </figure>
+        <div class="gallery-note reveal"><span>Environment / 05</span><p>Вода находится рядом с объектом и показана как часть природного контекста.</p></div>
       </div>
     </section>
 
