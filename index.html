@@ -10,11 +10,11 @@
   <meta property="og:title" content="Кедровская, 36А — частная территория у кедрового леса">
   <meta property="og:description" content="Дом 101,7 м² и 36 соток земли в природном окружении Риддера.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/facade-wide.webp">
+  <meta property="og:image" content="images/facade-front.webp">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 6 14 20h20z M24 15 12 30h24z M24 24 10 40h28z M22 40h4v5h-4z' fill='%2366715e'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -54,7 +54,7 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero-media" src="images/facade-wide.webp" alt="Дом на участке в окружении леса и гор" width="1300" height="732" fetchpriority="high">
+      <img class="hero-media" src="images/facade-front.webp" alt="Главный фасад дома в окружении леса" width="1300" height="733" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="shell hero-layout">
         <div class="hero-copy">
@@ -63,9 +63,11 @@
           <p class="hero-intro">Дом 101,7 м² на 36 сотках земли в посёлке Ульба, в окружении природы Восточного Казахстана.</p>
           <div class="hero-actions">
             <a class="primary-cta" href="#contact">Запросить материалы <span aria-hidden="true">→</span></a>
-            <a class="text-link text-link-light" href="#house">Изучить объект <span aria-hidden="true">↓</span></a>
+            <a class="secondary-cta" href="#house">Смотреть фотографии <span aria-hidden="true">→</span></a>
           </div>
         </div>
+        <p class="hero-statement">Дом, где природа<br>становится частью жизни</p>
+        <div class="hero-index" aria-hidden="true"><span>01</span><i></i></div>
       </div>
     </section>
 
@@ -157,7 +159,7 @@
       <div class="shell location-editorial">
         <div class="section-copy reveal">
           <p class="overline">04 / Локация</p>
-          <h2 id="location-title">Природное окружение Риддера</h2>
+          <h2 id="location-title">Удобное расположение</h2>
           <p>Посёлок Ульба, город Риддер, Восточный Казахстан. Тишина и природа определяют характер этого места.</p>
         </div>
         <div class="location-points reveal">
@@ -180,12 +182,24 @@
           <p>Планировки, дополнительные фото, документы и ответы на вопросы — по запросу.</p>
           <p class="final-price">230 000 000 ₸ · продажа собственником</p>
         </div>
-        <a class="primary-cta" href="tel:+77772754466">Запросить материалы <span aria-hidden="true">→</span></a>
+        <a class="primary-cta" href="#contact-form">Запросить материалы <span aria-hidden="true">→</span></a>
         <address>
           <a href="tel:+77772754466">+7 777 275 44 66</a>
           <span>Христолюбов Евгений</span>
         </address>
         <div class="footer-mark"><strong>Кедровская 36А</strong><span>Private property · Ridder</span></div>
+        <form class="enquiry-form" id="contact-form" novalidate>
+          <div class="enquiry-field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required>
+          </div>
+          <div class="enquiry-field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="40" required>
+          </div>
+          <button type="submit">Отправить запрос <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
