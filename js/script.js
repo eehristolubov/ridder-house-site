@@ -1,157 +1,155 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-/* Mobile nav */
-const burger = document.getElementById('burger');
+const body = document.body;
 const header = document.getElementById('site-header');
-burger.addEventListener('click', () => header.classList.toggle('open'));
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => header.classList.remove('open'));
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('site-nav');
+
+function setMenu(open) {
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  nav.classList.toggle('open', open);
+  header.classList.toggle('menu-active', open);
+  body.classList.toggle('menu-open', open);
+  if (open) nav.querySelector('a').focus();
+}
+
+menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900 && menuToggle.getAttribute('aria-expanded') === 'true') setMenu(false);
 });
 
-/* Header shrink + scroll progress + floating CTA */
-const progressBar = document.getElementById('scroll-progress');
-const floatingCta = document.getElementById('floating-cta');
-const heroHeight = () => document.querySelector('.hero').offsetHeight;
-
-/* Hide the floating CTA whenever a matching CTA (or the contact form
-   itself) is already on screen, so the same button never doubles up. */
-let primaryCtaVisible = false;
-const ctaWatchTargets = [
-  ...document.querySelectorAll('a.btn-primary[href="#contact"]'),
-  document.getElementById('contact')
-].filter(Boolean);
-
-let ticking = false;
-
-if ('IntersectionObserver' in window) {
-  const visibleCtas = new Set();
-  const ctaObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) visibleCtas.add(entry.target);
-      else visibleCtas.delete(entry.target);
-    });
-    primaryCtaVisible = visibleCtas.size > 0;
-    if (!ticking) {
-      requestAnimationFrame(onScroll);
-      ticking = true;
-    }
-  }, { threshold: 0.2 });
-  ctaWatchTargets.forEach(el => ctaObserver.observe(el));
+function updateHeader() {
+  header.classList.toggle('scrolled', window.scrollY > 24);
 }
 
-function onScroll() {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  progressBar.style.width = progress + '%';
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
 
-  header.classList.toggle('scrolled', scrollTop > 20);
-  floatingCta.classList.toggle('visible', scrollTop > heroHeight() * 0.8 && !primaryCtaVisible);
-
-  ticking = false;
-}
-
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(onScroll);
-    ticking = true;
-  }
-}, { passive: true });
-onScroll();
-setInterval(onScroll, 400);
-
-/* Scroll reveal */
+/* Quiet, one-time section reveals with a no-script-safe fallback. */
 const revealItems = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries) => {
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px' });
   revealItems.forEach(item => revealObserver.observe(item));
 } else {
   revealItems.forEach(item => item.classList.add('is-visible'));
 }
 
-/* Animated counters */
-const counters = document.querySelectorAll('.counter');
-function animateCounter(el) {
-  const target = parseFloat(el.dataset.count);
-  const decimals = parseInt(el.dataset.decimals || '0', 10);
-  const duration = 1400;
-  const start = performance.now();
-
-  function tick(now) {
-    const elapsed = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - elapsed, 3);
-    const value = target * eased;
-    el.textContent = value.toFixed(decimals);
-    if (elapsed < 1) requestAnimationFrame(tick);
-    else el.textContent = target.toFixed(decimals);
-  }
-  requestAnimationFrame(tick);
-}
-
-if ('IntersectionObserver' in window) {
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.6 });
-  counters.forEach(c => counterObserver.observe(c));
-} else {
-  counters.forEach(c => { c.textContent = parseFloat(c.dataset.count).toFixed(parseInt(c.dataset.decimals || '0', 10)); });
-}
-
-/* Gallery lightbox */
+/* Accessible gallery lightbox. */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxCount = document.getElementById('lightbox-count');
 const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const lightboxTriggers = [...document.querySelectorAll('[data-lightbox]')];
+let activeImage = 0;
+let lastFocusedElement = null;
+let touchStartX = 0;
 
-document.querySelectorAll('.gallery-photo img, .doc-photo img').forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.classList.add('open');
-  });
-});
+function renderLightbox() {
+  const trigger = lightboxTriggers[activeImage];
+  lightboxImg.src = trigger.dataset.lightbox;
+  lightboxImg.alt = trigger.dataset.alt || '';
+  lightboxCaption.textContent = trigger.dataset.caption || trigger.dataset.alt || '';
+  lightboxCount.textContent = `${String(activeImage + 1).padStart(2, '0')} / ${String(lightboxTriggers.length).padStart(2, '0')}`;
+}
+
+function openLightbox(index) {
+  lastFocusedElement = document.activeElement;
+  activeImage = index;
+  renderLightbox();
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  body.classList.add('lightbox-open');
+  lightboxClose.focus();
+}
 
 function closeLightbox() {
   lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  body.classList.remove('lightbox-open');
   lightboxImg.src = '';
+  if (lastFocusedElement) lastFocusedElement.focus();
 }
 
+function moveLightbox(direction) {
+  activeImage = (activeImage + direction + lightboxTriggers.length) % lightboxTriggers.length;
+  renderLightbox();
+}
+
+lightboxTriggers.forEach((trigger, index) => trigger.addEventListener('click', () => openLightbox(index)));
 lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+lightboxPrev.addEventListener('click', () => moveLightbox(-1));
+lightboxNext.addEventListener('click', () => moveLightbox(1));
+lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+lightbox.addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].screenX; }, { passive: true });
+lightbox.addEventListener('touchend', event => {
+  const distance = event.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(distance) > 50) moveLightbox(distance > 0 ? -1 : 1);
+}, { passive: true });
 
-/* Contact form -> Telegram (via a relay that keeps the bot token secret, see README) */
+document.addEventListener('keydown', event => {
+  const menuIsOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  const lightboxIsOpen = lightbox.classList.contains('open');
+
+  if (event.key === 'Escape' && lightboxIsOpen) closeLightbox();
+  else if (event.key === 'Escape' && menuIsOpen) {
+    setMenu(false);
+    menuToggle.focus();
+  } else if (lightboxIsOpen && event.key === 'ArrowLeft') moveLightbox(-1);
+  else if (lightboxIsOpen && event.key === 'ArrowRight') moveLightbox(1);
+
+  if (event.key !== 'Tab') return;
+  const activeContainer = lightboxIsOpen ? lightbox : (menuIsOpen ? header : null);
+  if (!activeContainer) return;
+  const focusable = [...activeContainer.querySelectorAll('a[href], button:not([disabled]), input:not([disabled])')]
+    .filter(element => element.offsetParent !== null);
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+
+/* Contact form → Telegram relay. */
 const TELEGRAM_RELAY_URL = 'https://ridder-house-site-relay.vercel.app/api/telegram';
-
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
+if (form) form.addEventListener('submit', async event => {
+  event.preventDefault();
   const name = form.name.value.trim();
   const phone = form.phone.value.trim();
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  form.name.setAttribute('aria-invalid', String(!name));
+  form.phone.setAttribute('aria-invalid', String(!phone));
 
   if (!name || !phone) {
     status.textContent = 'Пожалуйста, заполните имя и телефон.';
     status.className = 'form-status error';
+    (!name ? form.name : form.phone).focus();
     return;
   }
 
-  const submitBtn = form.querySelector('button[type="submit"]');
-  submitBtn.disabled = true;
-  status.textContent = 'Отправляем...';
+  submitButton.disabled = true;
+  status.textContent = 'Отправляем запрос…';
   status.className = 'form-status';
 
   try {
@@ -161,18 +159,17 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify({ name, phone })
     });
     const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || 'Relay error');
 
-    if (response.ok && data.ok) {
-      status.textContent = 'Спасибо! Заявка отправлена, мы свяжемся с вами в ближайшее время.';
-      status.className = 'form-status success';
-      form.reset();
-    } else {
-      throw new Error(data.error || 'Relay error');
-    }
-  } catch (err) {
-    status.textContent = 'Не удалось отправить заявку. Попробуйте ещё раз или позвоните нам напрямую.';
+    status.textContent = 'Спасибо. Запрос отправлен, мы свяжемся с вами в ближайшее время.';
+    status.className = 'form-status success';
+    form.reset();
+    form.name.setAttribute('aria-invalid', 'false');
+    form.phone.setAttribute('aria-invalid', 'false');
+  } catch (error) {
+    status.textContent = 'Не удалось отправить запрос. Пожалуйста, попробуйте ещё раз.';
     status.className = 'form-status error';
   } finally {
-    submitBtn.disabled = false;
+    submitButton.disabled = false;
   }
 });
